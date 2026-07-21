@@ -1,0 +1,152 @@
+{
+  "theme": "LIGHT",
+  "archetype": "Archetype 5: Luxury (Hybrid with Archetype 1 Organic & Earthy)",
+  "rationale": "To communicate 'affordable luxury' and a royal, warm tone without being flashy, we are adopting a primarily Light/Ivory theme anchored by the logo's deep Royal Navy and Brass/Gold accents. This creates a cinematic, trustworthy, and high-end hospitality experience.",
+  "colors": {
+    "brand_navy": "#1a2654",
+    "brand_gold": "#c9a14a",
+    "background": "#FDFBF7",
+    "surface": "#FFFFFF",
+    "surface_muted": "#F5F3ED",
+    "primary": "#1a2654",
+    "primary_foreground": "#FFFFFF",
+    "secondary": "#c9a14a",
+    "secondary_foreground": "#FFFFFF",
+    "accent": "#F2EBE1",
+    "border": "#E8E2D2",
+    "text_primary": "#111827",
+    "text_secondary": "#4b5563",
+    "success": "#2E7D32"
+  },
+  "typography": {
+    "headings": {
+      "family": "Cormorant Garamond, serif",
+      "weights": ["400", "500", "600", "700"],
+      "usage": "H1, H2, H3 and prominent display quotes. Never use for UI labels or dense body copy. Emphasize tracking-tight on massive sizes."
+    },
+    "body": {
+      "family": "Outfit, sans-serif",
+      "weights": ["300", "400", "500", "600"],
+      "usage": "All paragraph text, buttons, form labels, and UI elements. Ensure loose leading (leading-relaxed) for readability."
+    },
+    "sizes": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tight text-brand_navy",
+      "h2": "text-3xl sm:text-4xl lg:text-5xl text-brand_navy",
+      "h3": "text-xl sm:text-2xl text-brand_navy",
+      "h4": "text-lg sm:text-xl font-medium text-text_primary",
+      "body": "text-base text-text_secondary",
+      "small": "text-sm text-text_secondary uppercase tracking-[0.2em]"
+    }
+  },
+  "spacing_and_layout": {
+    "container_padding": "px-6 md:px-12 lg:px-24",
+    "section_spacing": "py-20 md:py-32",
+    "border_radius": "rounded-2xl",
+    "shadows": {
+      "soft": "shadow-[0_8px_30px_rgba(26,38,84,0.04)]",
+      "hover": "shadow-[0_12px_40px_rgba(201,161,74,0.15)]"
+    }
+  },
+  "components": {
+    "sticky_header": {
+      "style": "Glassmorphism: backdrop-blur-xl bg-[#FDFBF7]/85 border-b border-brand_gold/20",
+      "behavior": "Sticky z-50 at top. Must contain Logo (left), Navigation links (center - visible on desktop), and Book Now primary CTA (right)."
+    },
+    "hero_slider": {
+      "layout": "Full height (min-h-[85vh] md:min-h-screen) with auto-rotating slides.",
+      "overlay": "Gradient overlay from-brand_navy/70 via-brand_navy/40 to-transparent to ensure white/gold text readability.",
+      "trust_badge": "Floating badge in bottom-left or center with 5-star icons and 'Premium Hospitality at Honest Pricing'."
+    },
+    "floating_action_buttons": {
+      "position": "fixed bottom-24 right-6 md:bottom-8 md:right-8 z-40 flex flex-col gap-4",
+      "style": "Call and WhatsApp buttons. Use brand_gold for WhatsApp and brand_navy for Call. Must have an outer 'pulse' ring animation to draw attention."
+    },
+    "mobile_bottom_bar": {
+      "visibility": "flex md:hidden",
+      "style": "fixed bottom-0 w-full bg-brand_navy text-white z-50 grid grid-cols-3 divide-x divide-white/20 h-16 shadow-[0_-4px_20px_rgba(0,0,0,0.1)]",
+      "actions": ["Call", "WhatsApp", "Book Now"]
+    },
+    "rooms_grid": {
+      "layout": "CSS Grid (grid-cols-1 md:grid-cols-2 lg:grid-cols-3) gap-8.",
+      "card_style": "bg-surface rounded-2xl overflow-hidden soft shadow. Subtle border border-border.",
+      "image": "h-64 object-cover w-full",
+      "content": "p-6. Title in Cormorant Garamond, subtle gold divider line beneath title. Key amenities in small icons.",
+      "action": "Secondary outline button 'View Details' bordered in brand_gold."
+    },
+    "banquet_section": {
+      "layout": "Bento Grid or Split asymmetric layout (Text on one side, overflowing images on the other).",
+      "focus": "Highlight 'Indoor Hall' and 'Outdoor Lawn'. Use jaali texture as a subtle background layer behind text (opacity-5)."
+    },
+    "booking_modal": {
+      "style": "Shadcn Dialog. bg-surface rounded-2xl.",
+      "form": "Shadcn Form. Input fields with border-brand_gold/30 focus:border-brand_gold focus:ring-1 focus:ring-brand_gold. Use Shadcn DatePicker (Calendar)."
+    },
+    "platform_cards": {
+      "layout": "Flex row or grid to show MakeMyTrip, Goibibo, and JustDial logos as alternative booking platforms.",
+      "card_style": "bg-white border border-border rounded-xl p-4 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300"
+    },
+    "gallery": {
+      "navigation": "Tabs (All, Rooms, Banquet, Dining) - Shadcn Tabs.",
+      "grid": "Masonry or varied bento grid. Images must open in a lightbox on click (Framer motion dialog)."
+    },
+    "reviews": {
+      "layout": "Carousel (Framer Motion or Swiper).",
+      "card": "bg-surface_muted p-8 rounded-2xl. Include quote icon in brand_gold. Form for 'Write a Review' triggered via Dialog."
+    },
+    "footer": {
+      "style": "bg-brand_navy text-white pt-20 pb-10",
+      "typography": "Links in Outfit text-sm. Brand message in Cormorant Garamond.",
+      "texture": "Subtle gold jaali mandala pattern overlay at 5% opacity on the right side."
+    }
+  },
+  "motion": {
+    "scroll": "Smooth scrolling via Lenis (critical for luxury feel).",
+    "fade_in": "Use framer-motion `initial={{ opacity: 0, y: 20 }}` `whileInView={{ opacity: 1, y: 0 }}` for section entrances.",
+    "hover_states": "Buttons translate-y-[-2px] with increased shadow. Images scale-105 smoothly on hover."
+  },
+  "media": {
+    "logo": {
+      "url": "https://customer-assets.emergentagent.com/job_mahal-royal-stay/artifacts/zyx4v86i_1782439045725.png",
+      "category": "header, footer"
+    },
+    "hero_images": [
+      {
+        "url": "https://r1imghtlak.mmtcdn.com/aeb5ab9b-a48e-41b2-a43f-7ba4da0d103d.jpg?downsize=540:*",
+        "category": "hero_slider_1"
+      },
+      {
+        "url": "https://r1imghtlak.mmtcdn.com/a61c2542-f5af-41ac-ae47-43da81b9e656.jpeg?downsize=540:*",
+        "category": "hero_slider_2"
+      }
+    ],
+    "room_images": [
+      "https://r1imghtlak.mmtcdn.com/22652247-e55e-433e-8ee5-ed6b89691a03.jpg?downsize=540:*",
+      "https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/202504281828389999-65ed0543-d71c-4f20-8e3d-733be8b55551.jpg?downsize=540:*",
+      "https://r1imghtlak.mmtcdn.com/e615370a-6d2d-44b1-874d-7034c45de819.jpeg?downsize=540:*",
+      "https://r1imghtlak.mmtcdn.com/d1995d9b-477a-408b-a984-96b094b28473.jpg?downsize=540:*",
+      "https://r1imghtlak.mmtcdn.com/1cf5fcc2-26ce-41f6-a85c-0722bd9d643d.jpeg?downsize=540:*"
+    ],
+    "banquet_images": [
+      "https://r1imghtlak.mmtcdn.com/d1c12691-bc46-412a-8a25-be4c1107b0c8.jpeg?downsize=540:*",
+      "https://r1imghtlak.mmtcdn.com/169d5fdd-b302-4353-ba61-e5eef329d728.jpg?downsize=540:*"
+    ],
+    "gallery_extra": [
+      "https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/202504281828389999-0d6ffd8c-9c10-438c-8bc8-e87a0b4d2351.jpg?downsize=540:*",
+      "https://r1imghtlak.mmtcdn.com/a8a808fa-7e7f-4b18-bb24-c8eefe114ba6.jpeg?downsize=540:*",
+      "https://r1imghtlak.mmtcdn.com/37030a62-8df3-4a92-91ea-e3aa793ced14.jpg?downsize=540:*",
+      "https://r1imghtlak.mmtcdn.com/4d28a7b7-6b6f-4323-8273-5e27fc7c189b.jpeg?downsize=540:*"
+    ],
+    "platform_logos": {
+      "makemytrip": "https://upload.wikimedia.org/wikipedia/commons/0/07/Makemytrip_logo.svg",
+      "goibibo": "https://upload.wikimedia.org/wikipedia/commons/0/05/Goibibo_Logo.svg",
+      "justdial": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Justdial_Logo.svg"
+    },
+    "textures": {
+      "jaali_mandala": "https://images.unsplash.com/photo-1537734552481-35f4a9aca8c7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwyfHxnb2xkJTIwbWFuZGFsYSUyMHRleHR1cmV8ZW58MHx8fHwxNzgyNzUyNjU4fDA&ixlib=rb-4.1.0&q=85"
+    }
+  },
+  "testing": {
+    "rules": "All interactive and key informational elements MUST include a data-testid attribute to facilitate robust automated testing. Use kebab-case for these attributes (e.g. data-testid='hero-book-now-button')."
+  },
+  "instructions_to_main_agent": "Utilize pure Tailwind CSS in .js components for layout. Import Shadcn for Dialogs, DatePickers, and complex interactive forms. strictly adhere to the media URLs provided. Do not use placeholder tags. Ensure Cormorant Garamond is applied strictly to headings and Outfit to the body to maintain luxury contrast. Do not use Inter or generic default font stacks."
+}
