@@ -1,0 +1,36 @@
+{
+  "summary": "Completed full backend + frontend e2e testing for The King's Mahal landing page. All 10 pytest backend tests passed (100%). All requested frontend flows verified on desktop and mobile viewports — hero slider, sticky header, booking modal (header + room CTA + banquet CTA), 5 room cards, 2 banquet cards, 3 platform cards, gallery lightbox, reviews submit, FAQ accordion, Google Maps, newsletter subscribe, FABs, mobile bottom bar, and tel/wa.me links to +919131665380 are all working.",
+  "backend_issues": {
+    "critical": [],
+    "minor": []
+  },
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": [
+      {"screen": "Accessibility (booking modal & lightbox dialog)", "issues": ["Radix DialogContent missing DialogTitle/Description — console warnings about screen-reader accessibility. Wrap DialogTitle inside VisuallyHidden or add an explicit title to BookingProvider and Gallery lightbox."]}
+    ]
+  },
+  "test_report_links": [
+    "/app/backend/tests/backend_test.py",
+    "/app/test_reports/pytest/pytest_results.xml"
+  ],
+  "action_items": [
+    "Add a DialogTitle (or VisuallyHidden DialogTitle) and aria-describedby to the booking modal (BookingProvider.jsx) and gallery lightbox (Gallery.jsx) to remove Radix a11y console warnings — purely cosmetic, not blocking."
+  ],
+  "critical_code_review_comments": [
+    "server.py uses deprecated FastAPI @app.on_event('startup'/'shutdown') — works but should migrate to lifespan handler in a future iteration.",
+    "review_stats mixes a hard-coded baseline (122 reviews, 4.6 avg) with live data — acceptable for landing-page trust signals but worth documenting in code comment so the constants aren't accidentally reset.",
+    "Backend has no CORS_ORIGINS restriction (allow_origins='*'); fine for public landing page but worth tightening once domain is finalised.",
+    "Backend lacks any rate-limiting on POST /api/reviews and /api/enquiries — could be spammed; main agent may want to add simple throttling/captcha for production."
+  ],
+  "updated_files": [
+    "/app/backend/tests/backend_test.py (new)"
+  ],
+  "success_rate": {"backend": "100%", "frontend": "100%"},
+  "test_credentials": "N/A — no auth required",
+  "seed_data_creation": "Backend self-seeds 5 reviews on first startup; test created a few TEST_-prefixed reviews, enquiries and newsletter subscribers. Not cleaned up but they don't affect functionality.",
+  "retest_needed": false,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "Backend pytest suite lives at /app/backend/tests/backend_test.py (10 tests). Run with: pytest /app/backend/tests/backend_test.py -v. All endpoints are unauthenticated. Frontend public URL: https://mahal-royal-stay.preview.emergentagent.com. Note that reviews list and stats grow over time because TEST_ data is not auto-cleaned."
+}
