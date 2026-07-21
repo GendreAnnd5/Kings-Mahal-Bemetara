@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+    :root {
+        --background: 38 50% 98%;
+        --foreground: 224 60% 12%;
+        --card: 0 0% 100%;
+        --card-foreground: 224 60% 12%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 224 60% 12%;
+        --primary: 226 53% 22%;
+        --primary-foreground: 38 50% 98%;
+        --secondary: 41 53% 54%;
+        --secondary-foreground: 0 0% 100%;
+        --muted: 42 32% 94%;
+        --muted-foreground: 226 12% 38%;
+        --accent: 41 40% 92%;
+        --accent-foreground: 226 53% 22%;
+        --destructive: 0 70% 50%;
+        --destructive-foreground: 0 0% 100%;
+        --border: 41 28% 86%;
+        --input: 41 28% 86%;
+        --ring: 41 53% 54%;
+        --radius: 0.75rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        @apply bg-brand-cream text-foreground antialiased;
+        font-family: 'Outfit', sans-serif;
+    }
+    h1, h2, h3, h4 {
+        font-family: 'Cormorant Garamond', serif;
+        letter-spacing: -0.01em;
+    }
+    /* Selection */
+    ::selection {
+        background-color: #c9a14a;
+        color: #ffffff;
+    }
+}
+
+@layer utilities {
+    .font-serif {
+        font-family: 'Cormorant Garamond', serif;
+    }
+    .font-sans {
+        font-family: 'Outfit', sans-serif;
+    }
+    .gold-divider {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #c9a14a, transparent);
+    }
+    .gold-divider-short {
+        height: 2px;
+        width: 64px;
+        background: #c9a14a;
+        border-radius: 999px;
+    }
+    .text-balance {
+        text-wrap: balance;
+    }
+    .bg-jaali {
+        background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c9a14a' fill-opacity='0.08'%3E%3Cpath d='M40 0 L80 40 L40 80 L0 40 Z M40 14 L66 40 L40 66 L14 40 Z'/%3E%3Ccircle cx='40' cy='40' r='3'/%3E%3C/g%3E%3C/svg%3E");
+        background-size: 80px 80px;
+    }
+    .shimmer-gold {
+        background: linear-gradient(90deg, #c9a14a 0%, #e0bf72 25%, #c9a14a 50%, #e0bf72 75%, #c9a14a 100%);
+        background-size: 200% 100%;
+        animation: shine 6s linear infinite;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #FDFBF7;
+}
+::-webkit-scrollbar-thumb {
+    background: #c9a14a;
+    border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #a07f33;
+}
