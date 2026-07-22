@@ -93,7 +93,7 @@ class TestEnquiries:
         marker = f"TEST_{uuid.uuid4().hex[:8]}"
         payload = {
             "name": marker,
-            "phone": "+919131665380",
+            "phone": "+916260036628",
             "email": "guest@test.com",
             "check_in": "2026-02-01",
             "check_out": "2026-02-03",
