@@ -106,7 +106,7 @@ class TestEnquiries:
         body = r.json()
         assert "id" in body
         assert body["name"] == marker
-        assert body["phone"] == "+919131665380"
+        assert body["phone"] == "+916260036628"
 
         r2 = s.get(f"{API}/enquiries")
         assert r2.status_code == 200
