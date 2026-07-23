@@ -5,9 +5,9 @@ export const HOTEL = {
     tagline: "Royal Hospitality, Affordable Luxury",
     location: "Pikari, Bemetara, Chhattisgarh",
     address: "Near Central Bank of India, Kawardha-Bemetara Road, Pikari, Bemetara, Chhattisgarh",
-    phone: "+919131665380",
-    phoneDisplay: "+91 62600 36628",
-    whatsapp: "919131665380",
+    phone: "+919243606665",
+    phoneDisplay: "+91 924360 6665",
+    whatsapp: "919243606665",
     whatsappMessage:
         "Hi%2C%20I%20am%20interested%20in%20booking%20a%20room%2Fevent%20at%20The%20Kings%20Mahal",
     email: "stay@thekingsmahal.in",
