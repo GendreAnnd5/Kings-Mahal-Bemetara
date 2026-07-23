@@ -6,7 +6,7 @@ export const HOTEL = {
     location: "Pikari, Bemetara, Chhattisgarh",
     address: "Near Central Bank of India, Kawardha-Bemetara Road, Pikari, Bemetara, Chhattisgarh",
     phone: "+919131665380",
-    phoneDisplay: "+91 91316 65380",
+    phoneDisplay: "+91 62600 36628",
     whatsapp: "919131665380",
     whatsappMessage:
         "Hi%2C%20I%20am%20interested%20in%20booking%20a%20room%2Fevent%20at%20The%20Kings%20Mahal",
