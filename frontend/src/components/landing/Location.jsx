@@ -30,7 +30,7 @@ export default function Location() {
                             {HOTEL.address}
                         </p>
                         <p className="text-sm text-brand-navy/55 mt-3">
-                            Approx. 16 km from Bemetara city center · Well-connected by road.
+                            Approx. 1.5 km from Bemetara city center · Well-connected by road.
                         </p>
 
                         <div className="mt-7 space-y-3">
