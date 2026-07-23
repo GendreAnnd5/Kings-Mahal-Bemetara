@@ -100,7 +100,7 @@ export const BANQUET = [
         name: "Indoor Banquet Hall",
         seating: "450 seating",
         floating: "700 floating",
-        image: "https://r1imghtlak.mmtcdn.com/d1c12691-bc46-412a-8a25-be4c1107b0c8.jpeg?downsize=540:*",
+        image: "https://r1imghtlak.ibcdn.com/4d28a7b7-6b6f-4323-8273-5e27fc7c189b.jpeg",
         desc: "Warmly-lit interiors with elegant decor, perfect for weddings, engagements & ceremonies.",
     },
     {
@@ -193,7 +193,7 @@ export const NEARBY = [
     { name: "Bemetara City Center", distance: "1 km", icon: "Building2" },
     { name: "Central Bank of India", distance: "0.3 km", icon: "Landmark" },
     { name: "Kawardha Highway", distance: "On road", icon: "Milestone" },
-    { name: "Bus Stand", distance: "4 km", icon: "Bus" },
+    { name: "Bus Stand", distance: "0.5 km", icon: "Bus" },
     { name: "Railway Junction (Raipur)", distance: "85 km", icon: "TrainFront" },
 ];
 
