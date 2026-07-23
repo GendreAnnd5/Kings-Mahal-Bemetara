@@ -93,7 +93,7 @@ class TestEnquiries:
         marker = f"TEST_{uuid.uuid4().hex[:8]}"
         payload = {
             "name": marker,
-            "phone": "+919131665380",
+            "phone": "+918817265341",
             "email": "guest@test.com",
             "check_in": "2026-02-01",
             "check_out": "2026-02-03",
@@ -106,7 +106,7 @@ class TestEnquiries:
         body = r.json()
         assert "id" in body
         assert body["name"] == marker
-        assert body["phone"] == "+919131665380"
+        assert body["phone"] == "+918817265341"
 
         r2 = s.get(f"{API}/enquiries")
         assert r2.status_code == 200
